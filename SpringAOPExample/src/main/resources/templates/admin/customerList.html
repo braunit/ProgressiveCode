@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Customer list</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="stylesheet" type="text/css" media="all"
+  href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+
+      <h2>Customer list</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="customer : ${customerList}">
+            <th th:text="${customer.id}">1</th>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.lastName}"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" th:src="@{/js/jquery.min.js}"
+    src="js/jquery.min.js"></script>
+  <script type="text/javascript"
+    th:src="@{/js/jquery.serialize-object.min.js}"
+    src="js/jquery.serialize-object.min.js"></script>
+  <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"
+    src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

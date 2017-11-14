@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Customer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="stylesheet" type="text/css" media="all"
+  href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+
+      <h2>Customer details</h2>
+
+      <ul>
+        <li>First Name: <strong th:text="${customer.firstName}"></strong></li>
+        <li>Last Name: <strong th:text="${customer.lastName}"></strong></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script type="text/javascript" th:src="@{/js/jquery.min.js}"
+    src="js/jquery.min.js"></script>
+  <script type="text/javascript"
+    th:src="@{/js/jquery.serialize-object.min.js}"
+    src="js/jquery.serialize-object.min.js"></script>
+  <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"
+    src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
