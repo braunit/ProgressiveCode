@@ -1,5 +1,5 @@
 # Spring AOP Example
-This project consists of a Spring Boot based web application that shows how to use custom annotations in conjunction with Spring AOP to solve typical cross-cutting concern proplems.
+This project consists of a Spring Boot based web application that shows how to use custom annotations in conjunction with Spring AOP to solve typical cross-cutting concern problems.
 
 Detailed explanations about the project can be found here: 
 
