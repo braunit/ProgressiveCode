@@ -12,6 +12,6 @@ This project consists of a Spring Boot based web application that shows how to u
 ## Properties Example
 This project consists of a simple commandline Spring Boot application that shows how to read files from the resource folder correctly.
 
-# NginxLoggerExample
+## NginxLoggerExample
 
 A small project to demonstrate how to forward request information (e.g. remote IP address and referrer) from Nginx to a Spring Boot application.
