@@ -21,7 +21,7 @@ public class InitApplicationService {
     NotesService notesService;
 
     @EventListener(ApplicationReadyEvent.class)
-    public void doSomethingAfterStartup() {
+    public void initializeTestData() {
         LOGGER.info("Initialize test data");
 
         notesService.saveNotes(new Notes("Test 1", "Content 1"));
