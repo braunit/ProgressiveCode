@@ -2,7 +2,7 @@
 
 This repository is used to host the code examples described on https://progressive-code.com 
 
-# CRUDApp
+## CRUDApp
 
 This project is full working example of a simple Spring Boot based CRUD application.
 
