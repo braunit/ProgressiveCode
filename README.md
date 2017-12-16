@@ -8,6 +8,12 @@ This project is full working example of a simple Spring Boot based CRUD applicat
 
 The example code uses Thymeleaf Template Engine, Bootstrap 3 and Spring JPA in conjunction with HSQL DB.
 
+## CrudClientValidationApp
+
+This project is full working example of a simple Spring Boot based CRUD application with client-side form validation.
+
+The example code uses Thymeleaf Template Engine, Bootstrap 3 and Spring JPA in conjunction with HSQL DB.
+
 ## CrudServerValidationApp
 
 This project is full working example of a simple Spring Boot based CRUD application with server-side form validation.
