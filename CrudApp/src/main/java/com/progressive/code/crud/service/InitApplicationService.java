@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import com.progressive.code.crud.domain.Notes;
 
 /**
+ * This class is used to initialize some test data when the
+ * server starts up.
+ * 
  * Created by abraun on 23/11/2017.
  */
 @Service
@@ -20,6 +23,9 @@ public class InitApplicationService {
     @Autowired
     NotesService notesService;
 
+    /**
+     * Initialize the test data
+     */
     @EventListener(ApplicationReadyEvent.class)
     public void initializeTestData() {
         LOGGER.info("Initialize test data");
