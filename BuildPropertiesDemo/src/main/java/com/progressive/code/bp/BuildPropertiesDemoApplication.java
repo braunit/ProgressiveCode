@@ -10,7 +10,6 @@ import org.springframework.boot.info.BuildProperties;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.progressive.code.bp"})
 public class BuildPropertiesDemoApplication implements CommandLineRunner {
 
 	@Autowired
