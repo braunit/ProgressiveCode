@@ -47,7 +47,9 @@ public class JsonUtilsTest {
     @Test
     public void testGetValueAsString() throws JsonMappingException, JsonProcessingException {
         JsonNode node = JsonUtils.getJsonStringAsNode(getSimpleJsonString());
+        // Scenario 1: A string value can be retrieved
         assertEquals("John", JsonUtils.getValueAsString(node, "/firstName").get());
+        // Scenario 2: "active" is a boolean, thus an empty Optional will be returned
         assertFalse(JsonUtils.getValueAsString(node, "/active").isPresent());
     }
 
