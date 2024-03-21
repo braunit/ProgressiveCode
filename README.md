@@ -2,6 +2,12 @@
 
 This repository is used to host the code examples described on https://progressive-code.com 
 
+## BuildPropertiesDemo
+
+This project is full working example of a simple Spring Boot command line application.
+
+The focus of this project is on the integration of the BuildProperties information provided by SpringBoot.
+
 ## CRUDApp
 
 This project is full working example of a simple Spring Boot based CRUD application.
