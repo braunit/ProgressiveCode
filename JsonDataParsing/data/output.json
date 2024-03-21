@@ -1,0 +1,13 @@
+[ {
+  "customerId" : "1234567",
+  "totalSales" : 100000
+}, {
+  "customerId" : "1234568",
+  "totalSales" : 80000
+}, {
+  "customerId" : "1234569",
+  "totalSales" : 9000
+}, {
+  "customerId" : "1234570",
+  "totalSales" : 2000
+} ]

@@ -1,0 +1,33 @@
+{
+  "extractionDate": "2019-04-20",
+  "records": [
+    {
+      "customerId": "1234567",
+      "firstName": "John",
+      "lastName": "Doe",
+      "active": true,
+      "totalSales": 100000
+    },
+    {
+      "customerId": "1234568",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "active": true,
+      "totalSales": 80000
+    },
+    {
+      "customerId": "1234569",
+      "firstName": "Jack",
+      "lastName": "Smith",
+      "active": false,
+      "totalSales": 9000
+    },
+    {
+      "customerId": "1234570",
+      "firstName": "Fred",
+      "lastName": "Smith",
+      "active": true,
+      "totalSales": 2000
+    }
+  ]
+}
