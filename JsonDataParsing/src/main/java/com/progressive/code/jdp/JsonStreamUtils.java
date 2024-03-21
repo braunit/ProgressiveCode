@@ -16,8 +16,6 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class JsonStreamUtils {
 
@@ -32,11 +30,12 @@ public class JsonStreamUtils {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public static JsonParser getJsonParser(String file) throws JsonParseException, FileNotFoundException, IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.registerModule(new JavaTimeModule());
-        
-        return JSON_FACTORY.createParser(new InputStreamReader(new FileInputStream(file), Charset.forName("UTF-8")));
+    public static JsonParser getJsonParser(String file) 
+        throws JsonParseException, FileNotFoundException, IOException {
+
+        return JSON_FACTORY.createParser(
+                new InputStreamReader(
+                        new FileInputStream(file), Charset.forName("UTF-8")));
     }
 
     /**
@@ -51,7 +50,9 @@ public class JsonStreamUtils {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public static Long countArrayItems(String file, String arrayAttributeName) throws JsonParseException, FileNotFoundException, IOException {
+    public static Long countArrayItems(String file, String arrayAttributeName)
+            throws JsonParseException, FileNotFoundException, IOException {
+
         long counter = 0;
         // Get JsonParser
         JsonParser jsonParser = JsonStreamUtils.getJsonParser(file);
@@ -85,10 +86,13 @@ public class JsonStreamUtils {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public static Long countByBooleanCondition(String file, String arrayAttributeName, String filterAttribute, boolean mustBeTrue) throws JsonParseException, FileNotFoundException, IOException {
+    public static Long countByBooleanCondition(String file, String arrayAttributeName,
+            String filterAttribute, boolean mustBeTrue)
+            throws JsonParseException, FileNotFoundException, IOException {
+
         long counter = 0;
         // Get JsonParser
-        JsonParser jsonParser = JsonStreamUtils.getJsonParser("./data/customer-data.json");
+        JsonParser jsonParser = JsonStreamUtils.getJsonParser(file);
 
         // Find the start of the array
         if(JsonStreamUtils.findStartOfArray(jsonParser, arrayAttributeName)) {
@@ -122,7 +126,10 @@ public class JsonStreamUtils {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public static void generateReducedReport(String sourceFile, String targetFile, String arrayAttributeName, String... fieldNames) throws JsonParseException, FileNotFoundException, IOException {
+    public static void generateReducedReport(String sourceFile, String targetFile,
+            String arrayAttributeName, String... fieldNames)
+            throws JsonParseException, FileNotFoundException, IOException {
+
         // Optimize lookup using HashSet
         Set<String> fieldNameSet = new HashSet<>(Arrays.asList(fieldNames));
 
